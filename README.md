@@ -133,7 +133,8 @@ python3 -m chat.server.gradio_testgpt
 本项目基于[FastChat](https://github.com/lm-sys/FastChat) 构建，在此深深感谢他们的开源贡献！
 
 ## 联系我们
-![微信三群图片](https://github.com/codefuse-ai/Test-Agent/assets/17950752/dd770e3c-ca62-4a7e-be89-679cd5e49e4c)
+![testagent_wechat_3](https://github.com/codefuse-ai/Test-Agent/assets/106229399/dd803960-8952-4fbb-90b2-877ff792d2e3)
+
 
 
 
