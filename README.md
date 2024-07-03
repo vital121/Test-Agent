@@ -1,4 +1,4 @@
-# Test-Agent: 您的智能测试助理
+# Test-Agent: Your intelligent test assistant
 <p align="center">
   <img src="https://github.com/codefuse-ai/MFTCoder/blob/main/assets/github-codefuse-logo-update.jpg" width="50%" />
 </p>
@@ -18,38 +18,38 @@
     </a>
 </p>
 
-### 本地Mac M1体验效果
-![图片](https://github.com/codefuse-ai/Test-Agent/assets/103973989/8dba860f-c1bb-49d5-b9dd-a58e541562a6)
+### Local Mac M1 experience effect
+![Image](https://github.com/codefuse-ai/Test-Agent/assets/103973989/8dba860f-c1bb-49d5-b9dd-a58e541562a6)
 
-### 魔搭体验效果
-魔搭模型访问链接：[ModelScope TestGPT-7B](https://modelscope.cn/models/codefuse-ai/TestGPT-7B/summary)
+### Magic Build Experience Effect
+ModelScope TestGPT-7B: https://modelscope.cn/models/codefuse-ai/TestGPT-7B/summary
 ![MS](https://github.com/codefuse-ai/Test-Agent/assets/103973989/0e50b258-44f9-4dc6-8e30-0a01cf62d02b)
 
 
-## 什么是Test Agent？（Introduction）
+## What is Test Agent? （Introduction）
 
-**Test Agent** 旨在构建测试领域的“智能体”，融合大模型和质量领域工程化技术，促进质量技术代系升级。我们期望和社区成员一起合作，打造创新的测试领域解决方案，构建24小时在线的测试助理服务，让测试如丝般顺滑。
-## 本期特性（Features）
+**Test Agent** aims to build an "intelligent entity" in the testing field, integrating large models and engineering technologies in the quality field to promote the upgrading of quality technology generations. We hope to work with community members to create innovative testing solutions and build a 24-hour online testing assistant service to make testing as smooth as silk.
+## Features
 
-* **模型** 本期我们开源了测试领域模型TestGPT-7B。模型以CodeLlama-7B为基座，进行了相关下游任务的微调：
-  * **多语言测试用例生成（Java/Python/Javascript）** 一直以来都是学术界和工业界非常关注的领域，近年来不断有新产品或工具孵化出来，如EvoSuite、Randoop、SmartUnit等。然而传统的用例生成存在其难以解决的痛点问题，基于大模型的测试用例生成在测试用例可读性、测试场景完整度、多语言支持方面都优于传统用例生成工具。本次重点支持了多语言测试用例生成，在我们本次开源的版本中首先包含了Java、Python、Javascript的测试用例生成能力，下一版本中逐步开放Go、C++等语言。
-  * **测试用例Assert补全**  对当前测试用例现状的分析与探查时，我们发现代码仓库中存在一定比例的存量测试用例中未包含Assert。没有Assert的测试用例虽然能够在回归过程中执行通过，却无法发现问题。因此我们拓展了测试用例Assert自动补全这一场景。通过该模型能力，结合一定的工程化配套，可以实现对全库测试用例的批量自动补全，智能提升项目质量水位。
+* **Model** In this issue, we open-sourced the test domain model TestGPT-7B. The model is based on CodeLlama-7B and fine-tuned for related downstream tasks:
+  * **Multi-language test case generation (Java/Python/Javascript)** has always been an area of ​​great concern in academia and industry. In recent years, new products or tools have been continuously incubated, such as EvoSuite, Randoop, SmartUnit, etc. However, traditional test case generation has its own pain points that are difficult to solve. Test case generation based on large models is superior to traditional test case generation tools in terms of test case readability, test scenario completeness, and multi-language support. This time, we focus on supporting multi-language test case generation. In our open source version, we first include the test case generation capabilities of Java, Python, and Javascript, and will gradually open up languages ​​such as Go and C++ in the next version.
+  * **Test Case Assert Completion** When analyzing and exploring the current status of test cases, we found that a certain proportion of the stock test cases in the code repository do not contain Assert. Although test cases without Assert can be executed and passed during the regression process, they cannot find problems. Therefore, we have expanded the scenario of automatic completion of test case Assert. Through this model capability, combined with certain engineering support, batch automatic completion of test cases in the entire library can be achieved, intelligently improving the quality level of the project.
 
-* **工程框架** 本地模型快速发布和体验工程化框架
-  - ChatBot页面
-  - 模型快速启动
-  - 私有化部署，本地化的GPT大模型与您的数据和环境进行交互，无数据泄露风险，100%安全
+* **Engineering Framework** Local model rapid release and experience engineering framework
+  - ChatBot Page
+  - Model Quick Start
+  - Private deployment, localized GPT large model interacts with your data and environment, no data leakage risk, 100% secure
 
-**后续我们会持续迭代模型和工程化能力：**
-- 不断加入更多令人激动的测试域应用场景，如领域知识问答、测试场景分析等
-- 支撑面向测试场景的copilot 工程框架开放，如测试领域知识智能embedding、测试通用工具API体系、智能测试Agent等，敬请期待！
-- 以7B为基础，逐步扩展至13B、34B模型。欢迎关注！
+**We will continue to iterate our models and engineering capabilities in the future:**
+- Continue to add more exciting test domain application scenarios, such as domain knowledge quiz, test scenario analysis, etc.
+- Support the opening of the copilot engineering framework for testing scenarios, such as intelligent embedding of test domain knowledge, general test tool API system, intelligent test agent, etc. Stay tuned!
+- Based on 7B, it will be gradually expanded to 13B and 34B models. Welcome to follow!
 
-## 性能最强的7B测试领域大模型（Model）
-目前在TestAgent中，我们默认使用了TestGPT-7B模型。与当前已有开源模型相比，**TestGPT-7B模型在用例执行通过率（pass@1）、用例场景覆盖（平均测试场景数）上都处于业界领先水平。**
-TestGPT-7B模型核心能力的评测结果如下：
-- 多语言测试用例生成
-针对模型支持的三种语言：Java、Python、Javascript，Pass@1评测结果如下：
+## The most powerful 7B test field model (Model)
+Currently in TestAgent, we use the TestGPT-7B model by default. Compared with the existing open source models, the TestGPT-7B model is at the industry leading level in terms of use case execution pass rate (pass@1) and use case scenario coverage (average number of test scenarios).
+The evaluation results of the core capabilities of the TestGPT-7B model are as follows:
+- Multi-language test case generation
+For the three languages ​​supported by the model: Java, Python, and Javascript, the Pass@1 evaluation results are as follows:
 
 | Model | Java pass@1 | Java Average number of test scenarios | Python pass@1 | Python Average number of test scenarios | Javascript pass@1 | Javascript Average number of test scenarios |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -59,34 +59,34 @@ TestGPT-7B模型核心能力的评测结果如下：
 | Baichuan2-13B-Chat | 13.5% | 2.24 | 12.7% | 2.12 | 6.1% | 3.31 |
 
 
-- 测试用例Assert补全
-目前模型支持Java用例的Assert补全，Pass@1评测结果如下：
+- Test case Assert completion
+The current model supports Assert completion for Java use cases. The Pass@1 evaluation results are as follows:
 
 | Model | pass@1 | Percentage of strong validation |
 | --- | --- | --- |
 | Codefuse-TestGPT-7B | 71.1% | 100% |
 
 
-## 工程架构（Engineering Architecture）
+## Engineering Architecture
 ![JG](https://github.com/codefuse-ai/Test-Agent/assets/103973989/1b61beff-df59-4ab3-843c-266413c8dbc4)
 
-大模型的号角已经吹响，测试领域大模型也在不断进化中，通过预训练过程中积累的丰富世界知识，在复杂交互环境中展现出了非凡的推理与决策能力。
+The clarion call for big models has been sounded, and big models in the testing field are also constantly evolving. Through the rich world knowledge accumulated during the pre-training process, they have demonstrated extraordinary reasoning and decision-making capabilities in complex interactive environments.
 
 尽管在测试领域中基础模型取得了显著的成果，但仍然存在一些局限性，特定领域的测试任务通常需要专业化的工具或领域知识来解决。例如，基础模型可以通过预训练知识完成单次测试代码生成和测试文本生成等任务，但处理复杂的集成用例生成、特定领域用例生成和测试流程pipeline交互等问题时，需要更专业的工具和领域知识。因此将专用工具与基础模型整合在一起，可以充分发挥它们各自的优势。专用工具可以解决模型时效性不足、增强专业知识、提高可解释性和鲁棒性的问题。而基础模型则具备类人的推理规划能力，可以理解复杂的数据和场景，并与现实世界进行交互。
 
-在本期开放模型工程化部署和ChatBot基础上，我们将继续在测试开源领域深耕投入。协同社区志趣相投开发者们，一起打造测试领域最领先的Tools工程体系、智能测试助理和测试开源工程！
+Based on the open model engineering deployment and ChatBot in this issue, we will continue to invest deeply in the field of open source testing. Together with like-minded developers in the community, we will create the most advanced Tools engineering system, intelligent testing assistant and open source testing project in the testing field!
 
-## 快速使用（QuickStart）
-### 前置准备
+## Quick Start
+### Prerequisites
 
-#### 模型下载
+#### Model Download
 
-您可在[modelscope](https://modelscope.cn/models/codefuse-ai/TestGPT-7B)或[huggingface](https://huggingface.co/codefuse-ai/TestGPT-7B)上获取到模型的详细信息并下载模型文件。
-需要注意的是：
-1）如果您通过modelscope下载模型，下载方式可参考：[下载说明](https://www.modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%8B%E8%BD%BD#%E4%BD%BF%E7%94%A8Git%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B)；
-2）如果您通过huggingface下载模型，请确保您可以正常访问huggingface。
+You can get detailed information about the model and download the model file on [modelscope](https://modelscope.cn/models/codefuse-ai/TestGPT-7B) or [huggingface](https://huggingface.co/codefuse-ai/TestGPT-7B).
+have to be aware of is:
+1) If you download the model through modelscope, please refer to [Download Instructions](https://www.modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%8B%E8%BD%BD#%E4%BD%BF%E7%94%A8Git%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B);
+2) If you download the model via huggingface, please make sure you can access huggingface normally.
 
-#### 环境安装
+#### Environment Installation
 
 - python>=3.8
 - transformers==4.33.2
@@ -97,40 +97,46 @@ cd Test-Agent
 pip install -r requirements.txt
 ```
 
-在开始运行TestGPT-7B模型之前，请确保你的执行环境拥有大约14GB的显存。
-### 启动服务
+Before you start running the TestGPT-7B model, make sure your execution environment has about 14GB of video memory.
+### Start the service
 
-项目提供了网页端快速搭建UI的能力能够更直观的展示模型交互和效果，我们可以使用简单的几个命令把前端页面唤醒并实时调用模型能力。在项目目录下，依次启动以下服务：
+The project provides the ability to quickly build a UI on the web page to more intuitively display model interactions and effects. We can use a few simple commands to wake up the front-end page and call the model capabilities in real time. In the project directory, start the following services in sequence:
 
-1.**启动controller**
+1. **Start the controller**
 ![controller](https://github.com/codefuse-ai/Test-Agent/assets/103973989/e68ce187-c9f1-4ce8-9d59-ff9d8348d0ac)
 python3 -m chat.server.controller
 
-2.**启动模型worker**
+2. **Start the model worker**
 ![work](https://github.com/codefuse-ai/Test-Agent/assets/103973989/073e4e79-4005-4c98-87f7-0eaa0b2b1e22)
 python3 -m chat.server.model_worker --model-path models/TestGPT-7B --device mps
 
-（models/TestGPT-7B 为实际模型文件路径）
+(models/TestGPT-7B is the actual model file path)
 
-对于启动方式，可以按需选择以下几种配置选项：
-- --device mps 用于在Mac电脑上开启GPU加速的选项（Apple Silicon或AMD GPUs）；
-- --device xpu 用于在Intel XPU上开启加速的选项（Intel Data Center and Arc A-Series GPUs）；
+For the startup mode, you can select the following configuration options as needed:
+- --device mps Option to enable GPU acceleration on Mac computers (Apple Silicon or AMD GPUs);
+- --device xpu option to enable acceleration on Intel XPU (Intel Data Center and Arc A-Series GPUs);
   - 需安装[Intel Extension for PyTorch](https://intel.github.io/intel-extension-for-pytorch/xpu/latest/tutorials/installation.html)
-  - 设置OneAPI环境变量：source /opt/intel/oneapi/setvars.sh
-- --device npu 用于在华为AI处理器上开启加速的选项；
-  - 需安装[Ascend PyTorch Adapter](https://github.com/Ascend/pytorch)
-  - 设置CANN环境变量：source /usr/local/Ascend/ascend-toolkit/set_env.sh
-- --device cpu 单独使用CPU运行的选项，不需要GPU；
-- --num-gpus 2 指定并发gpu运行的选项。
+  - Set OneAPI environment variables: source /opt/intel/oneapi/setvars.sh
+- --device npu is an option to enable acceleration on Huawei AI processors;
+  - Need to install [Ascend PyTorch Adapter](https://github.com/Ascend/pytorch)
+  - Set CANN environment variables: source /usr/local/Ascend/ascend-toolkit/set_env.sh
+- --device cpu option to run using CPU alone, without GPU;
+- --num-gpus 2 Option to specify concurrent GPUs to run.
 
-3. **启动web服务**
+3. **Start the web service**
 python3 -m chat.server.gradio_testgpt
 ![web](https://github.com/codefuse-ai/Test-Agent/assets/103973989/340dae35-573b-4046-a3e8-e87a91453601)
-待服务准备就绪后，我们可以打开本地启动的web服务地址 http://0.0.0.0:7860 ，就能看到完整的前端页面了。在页面下方包含了【单测生成】和【Assert补全】的两个例子，点击按钮后会自动生成一段样例文本到输入框中，点击Send按钮就会触发模型运行，之后耐心等待一段时间后（运行时间视本机性能而定）即可看到完整的回答了。
+After the service is ready, we can open the local web service address http://0.0.0.0:7860 and see the complete front-end page. There are two examples of [Single Test Generation] and [Assert Completion] at the bottom of the page. Clicking the button will automatically generate a sample text into the input box. Clicking the Send button will trigger the model to run. After waiting for a while (the running time depends on the performance of the local machine), you can see the complete answer.
 ![demo](https://github.com/codefuse-ai/Test-Agent/assets/103973989/fd24274c-729b-4ce7-8763-a083b39300fb)
 
-## 🤗 致谢
-本项目基于[FastChat](https://github.com/lm-sys/FastChat) 构建，在此深深感谢他们的开源贡献！
+## 🤗 Acknowledgements
+This project is built on [FastChat](https://github.com/lm-sys/FastChat), and we would like to express our deep gratitude for their open source contributions!
 
-## 联系我们
+## contact us
 ![testagent_wechat_3](https://github.com/codefuse-ai/Test-Agent/assets/106229399/dd803960-8952-4fbb-90b2-877ff792d2e3)
+
+
+
+
+
+
