@@ -134,10 +134,3 @@ python3 -m chat.server.gradio_testgpt
 
 ## 联系我们
 ![testagent_wechat_3](https://github.com/codefuse-ai/Test-Agent/assets/106229399/dd803960-8952-4fbb-90b2-877ff792d2e3)
-
-
-
-
-
-
-
